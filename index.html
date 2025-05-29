@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroGPT - AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <i class="fas fa-plus"></i>
+                    New Chat
+                </button>
+            </div>
+            
+            <div class="chat-history" id="chatHistory">
+                <!-- Chat history items will be populated here -->
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span>User</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="chat-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="model-name">HydroGPT (Model H1)</h1>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-container" id="chatContainer">
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="logo-container">
+                        <!-- Image placeholder: hydrogpt-logo.png (400x400px) -->
+                        <img src="hydrogpt-logo.png" alt="HydroGPT Logo" class="logo">
+                    </div>
+                    <h1>Welcome to HydroGPT</h1>
+                    <p>Advanced AI Assistant - Model H1</p>
+                    <div class="capabilities">
+                        <div class="capability-card">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Complex Calculations</h3>
+                            <p>Solve advanced mathematical equations and perform scientific computations</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-brain"></i>
+                            <h3>Adaptive Learning</h3>
+                            <p>Continuously learns and improves from interactions</p>
+                        </div>
+                        <div class="capability-card">
+                            <i class="fas fa-globe"></i>
+                            <h3>Web Connected</h3>
+                            <p>Access real-time information from the internet</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="messages" id="messages">
+                    <!-- Messages will be populated here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Message HydroGPT..." 
+                        rows="1"
+                        maxlength="4000"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p class="disclaimer">HydroGPT may produce inaccurate information. Verify important information.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="ai-engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
